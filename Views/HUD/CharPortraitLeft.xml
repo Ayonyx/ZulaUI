@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View xmlns:template = "template.dtd"
+      name           = "left_portrait"
+      view_layout    = "stacked"
+      h_alignment    = "RIGHT" >
+  <template:ProgressBar template:name = "ManaBarShort"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_mana_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_mana.tga"
+  />
+  <template:ProgressBar template:name = "ManaBarLong"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_long_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_mana_long.tga"
+  />
+  <template:ProgressBar template:name = "StaminaBarShort"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_stamina_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_stamina.tga"
+  />
+  <template:ProgressBar template:name = "StaminaBarLong"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_long_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_stamina_long.tga"
+  />
+
+  <View view_layout="vertical" h_alignment="RIGHT">
+    <BuffListView name              = "BuffListView"
+                  h_local_alignment = "LEFT"
+                  layout_borders    = "Rect(15,0,0,0)"
+                  icon_size         = "Point(31,31)"
+                  icon_spacing      = "Point(3,3)"
+                  full_size_limit   = "24"
+                  max_columns       = "8"
+                  filter            = "hostile"
+    />
+    <View view_layout="horizontal" h_local_alignment="CENTER" layout_borders="Rect(0,0,-12,-5)">
+      <TextView name           = "NameView"
+                feature_flags  = "TVF_RENDER_SHADOW|TVF_RENDER_HALO"
+                default_color  = "active"
+                font           = "LARGE"
+                layout_borders = "Rect(0,0,0,0)"
+      />
+      <TextView name           = "LevelView"
+                feature_flags  = "TVF_RENDER_SHADOW|TVF_RENDER_HALO"
+                default_color  = "active"
+                font           = "LARGE"
+                layout_borders = "Rect(5,0,0,0)"
+      />
+    </View>
+    <View view_layout="stacked">
+      <View view_layout="horizontal">
+        <BitmapView name                 = "StatBarsContainer"
+                    view_layout          = "vertical"
+                    layout_borders       = "Rect(0,0,-10,6)"
+                    layout_inner_borders = "Rect(7,14,0,0)"
+                    interaction_borders  = "Rect(22,12,15,0)"
+                    h_alignment          = "LEFT"
+                    view_flags           = "WID_HANDLE_MOUSE"
+                    bitmap_gfx           = "PortraitGUI/portraitsbottom/portrait_background_player_left.tga" >
+          <ProgressBar name            = "HealthBar"
+                       orientation     = "right"
+                       slider_mode     = "clip"
+                       slide_down_time = "0.1"
+                       slide_up_time   = "0.0"
+                       left_margin     = "0"
+                       right_margin    = "0"
+                       flash_on_reduce = "false"
+                       bg_gfx          = "PortraitGUI/portraitsbottom/bar_health_empty.tga"
+                       fg_gfx          = "PortraitGUI/portraitsbottom/bar_health.tga"
+                       layout_borders  = "Rect(32,10,0,1)"
+                       label_color     = "white"
+          />
+          <View view_layout="horizontal" layout_borders="Rect(17,1,0,0)">
+            <ProgressBar name            = "StaminaBar"
+                         view_flags      = "WID_IGNORE_WHEN_HIDDEN"
+                         orientation     = "right"
+                         slider_mode     = "clip"
+                         slide_down_time = "0.1"
+                         slide_up_time   = "0.0"
+                         left_margin     = "0"
+                         bg_gfx          = ""
+                         fg_gfx          = ""
+                         label_font      = "SMALL"
+                         label_color     = "white"
+                         layout_borders  = "Rect(9,0,0,0)"
+            />
+            <View name="BarSpacer" view_flags="WID_IGNORE_WHEN_HIDDEN" layout_borders="Rect(2,0,0,0)"/>
+            <ProgressBar name            = "ManaBar"
+                         view_flags      = "WID_IGNORE_WHEN_HIDDEN|PBF_CLIP_MAX_COST"
+                         orientation     = "right"
+                         slider_mode     = "clip"
+                         slide_down_time = "0.1"
+                         slide_up_time   = "0.0"
+                         left_margin     = "0"
+                         bg_gfx          = ""
+                         fg_gfx          = "PortraitGUI/portraitsbottom/bar_mana.tga"
+                         label_font      = "SMALL"
+                         label_color     = "white"
+                         layout_borders  = "Rect(0,0,0,0)"
+            />
+          </View>
+          <VLayoutSpacer/>
+        </BitmapView>
+      </View>
+    </View>
+  </View>
+  <BitmapView name           = "DrunkenBrawlingHaze"
+              bitmap_gfx     = "PortraitGUI/portraitsbottom/brawling_drunken_haze.tga"
+              layout_borders = "Rect(0,0,0,0)"
+  />
+</View>

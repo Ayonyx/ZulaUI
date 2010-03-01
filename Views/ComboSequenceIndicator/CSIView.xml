@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View name="HUDView" xmlns:template="template.dtd" view_layout="horizontal" v_alignment="TOP">
+    <template:BitmapView template:name="DirUpperLeftTemp" bitmap_gfx="icons/combat/csi_bar_slot.tga" view_layout="stacked">
+        <BitmapView bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/bravo/csi_upperleft.png"/>
+        <BitmapView name="HighlightView" bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/highlight.tga"/>
+        <BitmapView name="DoneView"      bitmap_gfx="icons/combat/click.tga"/>	
+        <BitmapView name="MissView"       bitmap_gfx="icons/combat/csi_red.tga"/>
+        <BitmapView name="HitView"      bitmap_gfx="icons/combat/csi_green.tga"/>
+    </template:BitmapView>
+    <template:BitmapView template:name="DirUpperRightTemp" bitmap_gfx="icons/combat/csi_bar_slot.tga" view_layout="stacked">
+        <BitmapView bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/bravo/csi_upperright.png"/>
+        <BitmapView name="HighlightView" bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/highlight.tga"/>
+        <BitmapView name="DoneView"      bitmap_gfx="icons/combat/click.tga"/>	
+        <BitmapView name="MissView"       bitmap_gfx="icons/combat/csi_red.tga"/>
+        <BitmapView name="HitView"      bitmap_gfx="icons/combat/csi_green.tga"/>
+    </template:BitmapView>
+    <template:BitmapView template:name="DirHeadTemp" bitmap_gfx="icons/combat/csi_bar_slot.tga" view_layout="stacked">
+        <BitmapView bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/bravo/csi_middle.png"/>
+        <BitmapView name="HighlightView" bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/highlight.tga"/>
+        <BitmapView name="DoneView"      bitmap_gfx="icons/combat/click.tga"/>	
+        <BitmapView name="MissView"       bitmap_gfx="icons/combat/csi_red.tga"/>
+        <BitmapView name="HitView"      bitmap_gfx="icons/combat/csi_green.tga"/>
+    </template:BitmapView>
+    <template:BitmapView template:name="DirLowerLeftTemp" bitmap_gfx="icons/combat/csi_bar_slot.tga" view_layout="stacked">
+        <BitmapView bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/bravo/csi_lowerleft.png"/>
+        <BitmapView name="HighlightView" bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/highlight.tga"/>
+        <BitmapView name="DoneView"      bitmap_gfx="icons/combat/click.tga"/>	
+        <BitmapView name="MissView"       bitmap_gfx="icons/combat/csi_red.tga"/>
+        <BitmapView name="HitView"      bitmap_gfx="icons/combat/csi_green.tga"/>
+    </template:BitmapView>
+    <template:BitmapView template:name="DirLowerRightTemp" bitmap_gfx="icons/combat/csi_bar_slot.tga" view_layout="stacked">
+        <BitmapView bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/bravo/csi_lowerright.png"/>
+        <BitmapView name="HighlightView" bitmap_gfx="../../Customized/gfx/BelaUI/icons/combat/highlight.tga"/>
+        <BitmapView name="DoneView"      bitmap_gfx="icons/combat/click.tga"/>	
+        <BitmapView name="MissView"       bitmap_gfx="icons/combat/csi_red.tga"/>
+        <BitmapView name="HitView"      bitmap_gfx="icons/combat/csi_green.tga"/>
+    </template:BitmapView>
+
+    <!--BitmapView bitmap_gfx="icons/combat/csi_bar_top.tga"/-->
+    <BitmapView bitmap_gfx="icons/combat/csi_bar_slot.tga" view_layout="stacked">
+        <ItemIconView name="ComboIconView" view_flags="F_DISABLE_TOOLTIP|F_DISABLE_COOLDOWN" highlight_offset_2d="Point(0,0)"/>
+        <BitmapView name="ComboMissView"       bitmap_gfx="icons/combat/csi_red.tga"/>
+        <BitmapView name="ComboHitView"      bitmap_gfx="icons/combat/csi_green.tga"/>
+    </BitmapView>
+    <View name="DirIconContainer" view_layout="horizontal"/>
+    <!--BitmapView bitmap_gfx="icons/combat/csi_bar_bottom.tga"/-->
+</View>

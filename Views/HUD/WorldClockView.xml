@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View view_layout="stacked">
+    <BorderView view_layout="horizontal"
+                layout_borders="Rect(0,165,0,0)"
+                layout_inner_borders="Rect(40,0,40,0)"
+                gfx_tl         = ""
+                gfx_tr         = ""
+                gfx_bl         = ""
+                gfx_br         = ""
+                gfx_left       = "Misc/topbar_infospace_left.tga"
+                gfx_top        = ""
+                gfx_right      = "../../Customized/gfx/Misc/topbar_infospace_right2.tga"
+                gfx_bottom     = ""
+                gfx_background = "Misc/topbar_infospace_center.tga"
+    >
+    <BitmapView name="SunMoonIcon" view_flags="WID_IGNORE_WHEN_HIDDEN" layout_borders="Rect(0,10,0,0)">
+
+    </BitmapView>
+    <TextView name="WorldClockText" view_layout="stacked" layout_borders="Rect(0,20,0,0)" font="NORMAL" feature_flags="TVF_ENABLE_SHADOW | TVF_RENDER_SHADOW | TVF_RENDER_HALO"/>
+    </BorderView>
+</View>

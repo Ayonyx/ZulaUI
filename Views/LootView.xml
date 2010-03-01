@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View bck_paths_path="Views/MainGUI/InventoryAlternateBitmapPaths.xml" cell_counts="Point( 5, 2 )" grid_borders="Rect(0,0,0,0)" icon_borders="Rect(4,4,4,4)" icon_size="Point(55.0,55.0)" layout_inner_borders="Rect(0,0,0,0)" max_icon_zoom="1.75" move_to="Point(0.5,0.35)" preferred_icon_spacing="Point2(3,3)" text_color="#307090" view_layout="stacked">
+	<!--BitmapView bitmap_gfx="Misc/rock_tile.tga" view_flags="BMF_TILE_VERTICALLY|BMF_TILE_HORIZONTALLY"
+				max_size_extend="Point(COORD_MAX,COORD_MAX)"/-->
+	<BorderView gfx_background="popupwindows/black_window_3_background.tga" gfx_bl="popupwindows/loot_window_bottomleft.tga" gfx_bottom="popupwindows/loot_window_bottom.tga" gfx_br="popupwindows/loot_window_bottomright.tga" gfx_left="popupwindows/loot_window_left.tga" gfx_right="popupwindows/loot_window_right.tga" gfx_tl="popupwindows/loot_window_topleft.tga" gfx_top="popupwindows/loot_window_top.tga" gfx_tr="popupwindows/loot_window_topright.tga" h_alignment="LEFT" layout_borders="Rect(0,0,0,0)" layout_inner_borders="Rect(30,15,30,20)" view_flags="BVF_TILE_ALL_BORDERS | BVF_TILE_BACKGROUND" view_layout="vertical">
+    <TextView default_color="#E38F35" font="NORMAL_BOLD" layout_borders="Rect(3,0,0,0)" name="ViewName" value="&lt;localized token=LootView_Loot /&gt;"/>
+    <View layout_borders="Rect(0,15,0,10)" name="ItemContainer" view_layout="stacked"/>
+    <View h_alignment="RIGHT" layout_borders="Rect(0,-12,-9,0)" view_layout="horizontal">
+      <VLayoutSpacer/>
+      <Button label="&lt;localized token=LootView_TakeAll /&gt;" layout_borders="Rect(0,0,-15,0)" min_size_extend="Point(80,-1)" name="TakeAllButton" neighbour_e="Root:Close" neighbour_w="Root:Close"/>
+      <Button label="&lt;localized token=Close /&gt;" layout_borders="Rect(0,0,0,0)" min_size_extend="Point(80,-1)" name="CloseButton" neighbour_e="Root:TakeAll" neighbour_w="Root:TakeAll"/>
+    </View>       
+  </BorderView>
+</View>

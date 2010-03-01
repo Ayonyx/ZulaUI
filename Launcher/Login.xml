@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View  name="Root" view_layout="stacked" xmlns:template="template.dtd">
+    <template:TextInputView layout_borders="Rect(5,5,5,0)"
+			    max_size_limit="Point( 300, COORD_MAX )"
+			    min_size_extend="Point( 300, -1 )"
+			    template:name="InputViewTempl"
+			    textview_templ="TextViewTempl">
+	<template:TextView default_color="active"
+			   feature_flags="TVF_ACCEPT_TXT_INPUT | TVF_ACTIVE_HYPERLINKS | TVF_ALLOW_TEXT_SELECTION | TVF_FOCUS_SELECT_ALL"
+                           max_character_count="30"
+			   template:name="TextViewTempl"
+			   template:source="TextInputView:TextViewTempl"/>
+    </template:TextInputView>
+    
+    <template:Button layout_borders="Rect(5,0,5,0)"
+		     max_size_extend="Point( 100, -1 )"
+		     min_size_extend="Point( 100, -1 )"
+		     template:name="ButtonTempl"
+		     template:source="StdButtonSmall">
+    </template:Button>
+	<View view_layout="vertical">
+		<FadingBackgroundImageView name="BackImage"
+			 bitmap_gfx0="../../Customized/gfx/Launcher/empty.png"
+			 max_size_extend="Point(COORD_MAX, COORD_MAX)"
+			 layout_borders="Rect(0, -30, 0, -30)"
+             view_layout="vertical">
+		
+		<BitmapView bitmap_gfx = "zoning/conanlogo.tga"/>	
+	
+		<View max_size_extend="Point(COORD_MAX,-1.0)"
+			min_size_limit="Point(COORD_MAX,COORD_MAX)"
+			name="ContentView"
+			view_layout="stacked"
+			layout_borders="Rect(0, -550, 0, 0)">
+			<BitmapView bitmap_gfx="Launcher/login_background.tga"/>
+			<View name="Content" view_layout="vertical">
+				<View view_layout="horizontal">
+					<TextView layout_borders="Rect(0,5,5,5)"
+						value_token="15000:Launcher_Login_Username"
+						width_group="Col1"
+						width_group_owner="Content"/>
+					<TextInputView name="Username"
+						neighbour_e="Root:Login"
+					   neighbour_s="Root:Password"
+					   neighbour_w="Root:Quit"
+					   template:source="InputViewTempl"/>
+				</View>
+				<View view_layout="horizontal">
+					<TextView layout_borders="Rect(0,5,5,5)"
+						value_token="15000:Launcher_Login_Password"
+						width_group="Col1"
+						width_group_owner="Content"/>
+
+					<TextInputView name="Password"
+					   neighbour_e="Root:Login"
+					   neighbour_n="Root:Username"
+					   neighbour_s="Root:Quit"
+					   neighbour_w="Root:Quit"
+					   template:source="InputViewTempl"/>
+				</View>
+				<View layout_borders="Rect( 20, 0, 20, 13 )" name="NavButtons" view_layout="horizontal">
+					<Button label="&lt;localized token=Launcher_Login_Login category=Launcher /&gt;"
+					  name="Login"
+					  template:source="ButtonTempl"
+					  width_group_owner=":our_parent:"
+					  view_alpha="1"/>
+
+					<Button label="&lt;localized token=Launcher_Login_Quit category=Launcher /&gt;"
+					  name="Quit"
+					  template:source="ButtonTempl"
+					  width_group_owner=":our_parent:"
+					  view_alpha="1"/>
+				</View>
+			</View>
+			
+			<View view_layout="stacked" layout_borders="Rect(0,550,0,0)">
+				<BitmapView bitmap_gfx="Launcher/black_window_news.tga"/>
+				<TextView name="InfoView"
+					max_size="Point(560,240)"
+					min_size="Point(560,240)"
+					  v_scrollctrl_mode="SCROLLBAR_AUTO"
+					v_scrollbar_template="ScrollBarGrey"
+					feature_flags="TVF_ACTIVE_HYPERLINKS | TVF_ALLOW_TEXT_SELECTION | TVF_FOCUS_SELECT_ALL | TVF_MULTILINE | TVF_WORD_WRAP" />
+			</View>
+		</View>
+    </FadingBackgroundImageView>
+	</View>
+ </View>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View background_tile="Launcher/big_background_standin.tga"
+      view_flags="WID_HANDLE_MOUSE"
+      camera_lookat_x="0"
+      camera_lookat_y="1.2"
+      camera_lookat_z="0"
+      camera_pos_x="0"
+      camera_pos_y="3"
+      camera_pos_z="-10"
+      dimension_header_color="#FE5604"
+      dimension_text_color="#B7B7B7"
+      dimension_text_font="HYBORIANSMALL"
+      name="Root"
+      view_layout="stacked"
+      xmlns:template="template.dtd">
+
+  <View view_layout="stacked" max_size_extend="Point(COORD_MAX, COORD_MAX)" >
+    <BitmapView name="BackdropView" bitmap_gfx="Launcher/char_sel_default_background_d.tga" view_flags="BMF_IGNORE_BITMAP_HEIGHT|BMF_IGNORE_BITMAP_WIDTH" max_size_extend="Point(COORD_MAX, COORD_MAX)"/>  
+    <View view_layout="vertical">
+      <BitmapView bitmap_gfx="Launcher/big_bar_top_inside.tga" max_size_extend="Point(COORD_MAX,-1.0)" min_size_limit="Point(-1.0,COORD_MAX)" name="BTopInside" view_flags="BMF_TILE_HORIZONTALLY"/>
+      <View name="ContentView" view_layout="stacked">
+        <View layout_inner_borders="Rect(30,10,0,0)" view_layout="horizontal">
+          <CharacterSlotListView name="CharacterSlotList" view_layout="vertical"/>
+          <HLayoutSpacer/>
+          <ServerSelectionListView name="ServerSelection"/>
+        </View>
+      </View>
+      <BitmapView bitmap_gfx="Launcher/big_bar_bottom_inside.tga" view_flags="BMF_TILE_HORIZONTALLY" h_alignment="CENTER" max_size_extend="Point(COORD_MAX,-1.0)" min_size_limit="Point(-1.0,COORD_MAX)" name="BBottomInside" view_layout="stacked">
+        <BitmapView bitmap_gfx="Launcher/dark_shadow_dent.tga" layout_borders="Rect(0,-45,5,0)" name="BBottomInside" view_layout="stacked"/>
+      </BitmapView>
+    </View>
+    <View view_layout="vertical">
+      <TextView feature_flags="TVF_RENDER_SHADOW|TVF_ENABLE_SHADOW" name="TerritoryAddr"/>
+      
+      <VLayoutSpacer/>
+      <View layout_borders="Rect( 20, 0, 20, 13 )" min_size_extend="Point(COORD_MAX,-1)" name="NavButtons" view_layout="horizontal">
+        <Button gfx_icon="CharCreation/arrow_left.tga" icon_side="left" label="&lt;localized token=Launcher_CharacterSelectView_Back category=Launcher /&gt;" layout_borders="Rect(5,0,5,0)" min_size_extend="Point(120,-1)" name="Back" neighbour_e="Root:Settings" neighbour_n="Root:Play" neighbour_s="Root:Play" neighbour_w="Root:Account" template:source="StdButtonStone" view_alpha="0.7"/>
+        <HLayoutSpacer/>
+        <Button label="&lt;localized token=Launcher_CharacterSelectView_Settings category=Launcher /&gt;" layout_borders="Rect(5,0,5,0)" min_size_extend="Point(120,-1)" name="Settings" neighbour_e="Root:Account" neighbour_n="Root:Play" neighbour_s="Root:Play" neighbour_w="Root:Back" template:source="StdButtonStone" view_alpha="0.7"/>
+        <Button label="&lt;localized token=Launcher_CharacterSelectView_ManageAccount category=Launcher /&gt;" layout_borders="Rect(5,0,5,0)" min_size_extend="Point(120,-1)" name="Account" neighbour_e="Root:Back" neighbour_n="Root:Play" neighbour_s="Root:Play" neighbour_w="Root:Settings" template:source="StdButtonStone" view_alpha="0.7"/>
+      </View>
+    </View>
+    <BitmapView bitmap_gfx="Launcher/newcc/start_star.tga" layout_borders="Rect(0,0,0,-120)" v_local_alignment="BOTTOM"/>
+    <Button label="&lt;localized token=Launcher_CharacterSelectView_Play category=Launcher /&gt;" layout_borders="Rect(0,0,0,67)" min_size_extend="Point(120,-1)" name="PlayButton" neighbour_e="Root:Settings" neighbour_n="Root:Password" neighbour_s="Root:Username" neighbour_w="Root:Login" template:source="StdButtonStone"  v_local_alignment="BOTTOM"/>
+  </View>
+</View>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View xmlns:template = "template.dtd"
+      name           = "left_portrait"
+      view_layout    = "stacked"
+      h_alignment    = "LEFT">
+  <template:ProgressBar template:name = "ManaBarShort"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_mana_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_mana.tga"
+  />
+  <template:ProgressBar template:name = "ManaBarLong"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_long_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_mana_long.tga"
+  />
+  <template:ProgressBar template:name = "StaminaBarShort"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_stamina_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_stamina.tga"
+  />
+  <template:ProgressBar template:name = "StaminaBarLong"
+                        bg_gfx        = "PortraitGUI/portraitsbottom/bar_long_empty.tga"
+                        fg_gfx        = "PortraitGUI/portraitsbottom/bar_stamina_long.tga"
+  />
+
+  <View view_layout="stacked" h_alignment="LEFT" v_alignment="BOTTOM">
+    <View view_layout="vertical" h_alignment="LEFT">
+      <BuffListView name              = "BuffListView"
+                    h_local_alignment = "LEFT"
+                    layout_borders    = "Rect(15,0,0,0)"
+                    icon_size         = "Point(31,31)"
+                    icon_spacing      = "Point(3,3)"
+                    full_size_limit   = "24"
+                    max_columns       = "8"
+                    filter            = "friendly | hostile"
+      />
+      <View view_layout="horizontal" h_local_alignment="CENTER" layout_borders="Rect(-8,0,0,-3)">
+        <View view_layout="horizontal">
+          <BitmapView name       = "SkullLeft"
+                      bitmap_gfx = "PortraitGUI/little_skull.tga"
+                      view_flags = "WID_IGNORE_WHEN_HIDDEN"
+          />
+          <TextView name           = "NameView"
+                    view_flags     = "WID_IGNORE_WHEN_HIDDEN"
+                    feature_flags  = "TVF_RENDER_SHADOW|TVF_RENDER_HALO"
+                    default_color  = "active"
+                    font           = "LARGE"
+                    layout_borders = "Rect(0,0,0,0)"
+          />
+          <TextView name           = "LevelView"
+                    view_flags     = "WID_IGNORE_WHEN_HIDDEN"
+                    feature_flags  = "TVF_RENDER_SHADOW|TVF_RENDER_HALO"
+                    default_color  = "active"
+                    font           = "LARGE"
+                    layout_borders = "Rect(5,0,0,0)"
+          />
+          <BitmapView name           = "LockView"
+                      bitmap_gfx     = "PortraitGUI/lock_white.tga"
+                      max_size_limit = "Point(25, 25)"
+                      view_flags     = "WID_IGNORE_WHEN_HIDDEN"
+          />
+          <BitmapView name       = "SkullRight"
+                      bitmap_gfx = "PortraitGUI/little_skull.tga"
+                      view_flags = "WID_IGNORE_WHEN_HIDDEN"
+          />
+        </View>
+      </View>
+      <View view_layout="stacked">
+        <View view_layout="vertical">
+          <BitmapView name                 = "StatBarsContainer"
+                      view_layout          = "vertical"
+                      layout_borders       = "Rect(-6,0,0,6)"
+                      layout_inner_borders = "Rect(0,14,10,0)"
+                      interaction_borders  = "Rect(15,12,22,0)"
+                      h_alignment          = "RIGHT"
+                      view_flags           = "WID_HANDLE_MOUSE">
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_minion.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_normal.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_miniboss.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_boss.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_group_minion.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_group_normal.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_group_boss.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_raid_minion.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_raid_subnormal.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_raid_normal.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_raid_boss.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_player_right.tga"/>
+            <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_object.tga"/>
+            <ProgressBar name            = "HealthBar"
+                         orientation     = "right"
+                         slider_mode     = "clip"
+                         slide_down_time = "0.1"
+                         slide_up_time   = "0.0"
+                         left_margin     = "0"
+                         right_margin    = "0"
+                         flash_on_reduce = "false"
+                         bg_gfx          = "PortraitGUI/portraitsbottom/bar_health_empty.tga"
+                         fg_gfx          = "PortraitGUI/portraitsbottom/bar_health.tga"
+                         layout_borders  = "Rect(0,10,26,0)"
+                         label_color     = "white"
+            />
+            <View view_layout="horizontal" layout_borders="Rect(0,2,21,0)">
+              <ProgressBar name            = "StaminaBar"
+                           view_flags      = "WID_IGNORE_WHEN_HIDDEN"
+                           orientation     = "right"
+                           slider_mode     = "clip"
+                           slide_down_time = "0.1"
+                           slide_up_time   = "0.0"
+                           left_margin     = "0"
+                           bg_gfx          = ""
+                           fg_gfx          = ""
+                           label_font      = "SMALL"
+                           label_color     = "white"
+              />
+              <View name="BarSpacer" view_flags="WID_IGNORE_WHEN_HIDDEN" layout_borders="Rect(2,0,0,0)"/>
+              <ProgressBar name            = "ManaBar"
+                           view_flags      = "WID_IGNORE_WHEN_HIDDEN"
+                           orientation     = "right"
+                           slider_mode     = "clip"
+                           slide_down_time = "0.1"
+                           slide_up_time   = "0.0"
+                           left_margin     = "0"
+                           bg_gfx          = ""
+                           fg_gfx          = ""
+                           label_font      = "SMALL"
+                           label_color     = "white"
+              />
+            </View>
+            <VLayoutSpacer/>
+          </BitmapView>
+        </View>
+        <BitmapView name           = "BossOverlay"
+                    layout_borders = "Rect(0,0,10,4)">
+          <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_boss_overlay.tga"/>
+          <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_group_boss_overlay.tga"/>
+          <nocreate:Bitmap name="PortraitGUI/portraitsbottom/portrait_background_raid_boss_overlay.tga"/>
+        </BitmapView>
+      </View>
+    </View>
+    <View name           = "TargetContainerView"
+          view_layout    = "vertical"
+          h_alignment    = "LEFT"
+          layout_borders = "Rect(197,0,0,13)"
+          view_flags     = "WID_IGNORE_WHEN_HIDDEN">
+      <TextView name           = "TargetNameView"
+                layout_borders = "Rect(17,0,0,-3)"
+                max_size_limit = "Point(140,COORD_MAX)"
+                default_color  = "active"
+                feature_flags  = "TVF_RENDER_SHADOW|TVF_RENDER_HALO"
+      />
+      <BitmapView name        = "TargetHealthBarBg"
+                  view_layout = "stacked"
+                  bitmap_gfx  = "PortraitGUI/portraitsbottom/targettarget_bg.tga">
+        <CharStatBar name            = "TargetHealthBar"
+                     stat_type       = "health"
+                     slide_down_time = "0.1"
+                     slide_up_time   = "0.0"
+                     flash_on_reduce = "false"
+                     bg_gfx          = ""
+                     fg_gfx          = "PortraitGUI/portraitsbottom/targettarget_health.tga"
+                     flash_gfx       = "PortraitGUI/portraitsbottom/targettarget_flash.tga"
+                     label_color     = "white"
+        />
+      </BitmapView>
+    </View>
+  </View>
+  <BitmapView name           = "DrunkenBrawlingHaze"
+              bitmap_gfx     = "PortraitGUI/portraitsbottom/brawling_drunken_haze.tga"
+              layout_borders = "Rect(0,0,0,0)"
+  />
+</View>

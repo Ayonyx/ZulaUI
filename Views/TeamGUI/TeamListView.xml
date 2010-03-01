@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<!-- Stonerune UI * Shahir * Crom Server -->
+<View view_layout="stacked" h_alignment="LEFT" view_flags="WID_HANDLE_MOUSE">
+	<BorderView name                 = "Background"
+		view_layout          = "stacked"
+		max_size_extend="Point(COORD_MAX,COORD_MAX)"
+		gfx_tl               = ""
+		gfx_tr               = ""
+		gfx_bl               = ""
+		gfx_br               = ""
+		gfx_left             = ""
+		gfx_top              = ""
+		gfx_right            = ""
+		gfx_bottom           = ""
+		gfx_background       = ""
+	/>
+	<MiniCharListView name="ListView"
+		max_char_count="6"
+		view_layout="vertical"
+		layout_borders="Rect(15,20,5,18)"
+		hide_empty_slots="true" />
+</View>

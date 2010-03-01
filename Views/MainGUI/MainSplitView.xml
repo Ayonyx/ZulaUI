@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View xmlns:template="template.dtd"
+      view_layout="stacked"
+      v_alignment="TOP"
+      panel_size_normal   = "Point(349,612)"
+      panel_size_extended = "Point(539,612)"
+      slide_sound          = "sfx/gui/gui_sidebar_sliding.wav"
+      >
+    <_BitmapView bitmap_gfx="bottombars/top_bar.tga"
+		max_size_extend="Point(COORD_MAX,-1)"
+		view_flags="BMF_TILE_HORIZONTALLY"
+		layout_borders="Rect(0,0,0,0)"/>
+    <View view_layout="horizontal" layout_inner_borders="Rect(0,0,0,0)" v_alignment="TOP">
+	<View name="LeftPanelBorders"
+	      view_flags="WID_HANDLE_MOUSE|WID_AUTO_HIGHLIGHT"
+	      interaction_borders="Rect(0,0,20,30)"
+	      view_layout="stacked"
+	      h_alignment="RIGHT"
+	      v_alignment="TOP"
+	      >
+	    <BorderView view_flags="BVF_TILE_LEFT|BVF_TILE_RIGHT|BVF_TILE_TOP|BVF_TILE_BOTTOM|BVF_TILE_BACKGROUND"
+			view_layout="vertical"
+			layout_borders="Rect(0,0,7,0)"
+			bg_bitmap_borders    = "Rect(0,20,20,30)"
+			_min_size_extend="Point(569,690)"
+			_max_size_limit ="Point(569,690)"
+			gfx_tl         = ""
+			gfx_tr         = "sidebars/sidebar_left_topright.tga"
+			gfx_bl         = ""
+			gfx_br         = "sidebars/sidebar_left_bottomright.tga"
+			gfx_left       = ""
+			gfx_top        = "sidebars/sidebar_left_top.tga"
+			gfx_right      = "sidebars/sidebar_left_right.tga"
+			gfx_bottom     = "sidebars/sidebar_left_bottom.tga"
+			gfx_background = "Misc/rock_tile.tga"
+			>
+		<View view_layout="stacked" h_alignment="LEFT" v_alignment="TOP" max_size_extend="Point(COORD_MAX,-1)" layout_borders="Rect(15,12,0,4)">
+		    <TextView name="LeftPanelTitle" default_color="active" font="LARGE" feature_flags="TVF_RENDER_SHADOW|TVF_RENDER_HALO" />
+		</View>
+		<SideBarDock name="LeftPanelDock"
+			     layout_borders = "Rect(0,0,28,43)"
+			     dock_type_name="SideBarLeft"
+			     view_layout="stacked"
+			     min_size_extend="Point(541,612)"
+			     max_size_limit ="Point(541,612)"
+			     />
+	    </BorderView>
+	    <_View name="ExpandButtonGroupLeft" view_layout="stacked" h_alignment="RIGHT">
+		<Button name="ExpandButtonLeft"
+			layout_borders="Rect(0,80,0,0)"
+			gfxid_raised    = "featgui/expand_sidebar.tga"
+			gfxid_pressed   = "featgui/expand_sidebar_click.tga"
+			gfxid_highlight = "featgui/expand_sidebar_hover.tga"/>
+		<Button name="ContractButtonLeft"
+			layout_borders="Rect(0,80,26,0)"
+			gfxid_raised    = "featgui/contract_sidebar.tga"
+			gfxid_pressed   = "featgui/contract_sidebar_click.tga"
+			gfxid_highlight = "featgui/contract_sidebar_hover.tga"/>
+	    </_View>
+	</View>
+	<_View _layout_borders="Rect(-14,0,-14,0)" max_size_extend="Point(-1,COORD_MAX)"/>
+	<HLayoutSpacer/>
+	
+	<View name="RightPanelBorders"
+	      view_flags="WID_HANDLE_MOUSE|WID_AUTO_HIGHLIGHT"
+	      interaction_borders="Rect(20,0,0,30)"
+	      view_layout="stacked"
+	      h_alignment="LEFT"
+	      v_alignment="TOP"
+	      >
+	    <BorderView view_flags="BVF_TILE_LEFT|BVF_TILE_RIGHT|BVF_TILE_TOP|BVF_TILE_BOTTOM|BVF_TILE_BACKGROUND"
+			view_layout="vertical"
+			layout_borders="Rect(7,0,0,0)"
+			layout_inner_borders ="Rect(28,0,0,43)"
+			bg_bitmap_borders    = "Rect(20,20,0,30)"
+			gfx_tl         = "sidebars/sidebar_right_topleft.tga"
+			gfx_tr         = ""
+			gfx_bl         = "sidebars/sidebar_right_bottomleft.tga"
+			gfx_br         = ""
+			gfx_left       = "sidebars/sidebar_right_left.tga"
+			gfx_top        = "sidebars/sidebar_right_top.tga"
+			gfx_right      = ""
+			gfx_bottom     = "sidebars/sidebar_right_bottom.tga"
+			gfx_background = "Misc/rock_tile.tga"
+			>
+		<View view_layout="stacked" h_alignment="RIGHT" v_alignment="TOP" max_size_extend="Point(COORD_MAX,-1)" layout_borders="Rect(0,12,15,4)">
+		    <TextView name="RightPanelTitle" default_color="active" font="LARGE" feature_flags="TVF_RENDER_SHADOW|TVF_RENDER_HALO"/>
+		</View>
+		<SideBarDock name="RightPanelDock"
+			     dock_type_name="SideBarRight"
+			     view_layout="stacked"
+			     min_size_extend="Point(349,612)"
+			     max_size_limit ="Point(349,612)"/>
+	    </BorderView>
+	    <_View name="ExpandButtonGroupRight" view_layout="stacked" h_alignment="LEFT">
+		<Button name="ExpandButtonRight"
+			layout_borders="Rect(0,80,0,0)"
+			gfxid_raised    = "featgui/contract_sidebar.tga"
+			gfxid_pressed   = "featgui/contract_sidebar_click.tga"
+			gfxid_highlight = "featgui/contract_sidebar_hover.tga"/>
+		<Button name="ContractButtonRight"
+			layout_borders="Rect(26,80,0,0)"
+			gfxid_raised    = "featgui/expand_sidebar.tga"
+			gfxid_pressed   = "featgui/expand_sidebar_click.tga"
+			gfxid_highlight = "featgui/expand_sidebar_hover.tga"/>
+	    </_View>
+	</View>
+    </View>
+    <View view_layout="horizontal" tab_spacing="-17">
+	<template:SidepanelTab inactive_interaction_borders="Rect(5,0,5,18)" active_interaction_borders="Rect(5,0,5,7)"/>
+	<SidepanelTab name="SPTabInventoryView"
+		      hotkey      = "Toggle_InventoryView"
+		      left_module = "SPWearView"
+		      right_module = "SPInventoryView"
+		      />
+	<SidepanelTab name="SPTabCharacter"
+		      layout_borders="Rect(-17,0,0,0)"
+		      hotkey      = "Toggle_SP_Character"
+		      left_module = "SPCharAttribView"
+		      right_module = "SPCharSkillsView"
+		      />
+	<SidepanelTab name="SPTabSpells"
+		      view_flags="WID_IGNORE_WHEN_HIDDEN"
+		      layout_borders="Rect(-17,0,0,0)"
+		      hotkey      = "Toggle_SP_Spells"
+		      left_module = "SPSpellsLeft"
+		      right_module = "SPSpellsRight"
+		      />
+	<SidepanelTab name="SPTabFeats" 
+		      view_flags="WID_IGNORE_WHEN_HIDDEN"
+		      layout_borders="Rect(-17,0,0,0)"
+		      hotkey      = "Toggle_SP_Feats"
+		      left_module  = "SPFeatsLeft"
+		      right_module = "SPFeatsRight"
+		      view_show_expression="s:level>=10"
+		      />
+	<SidepanelTab name="SPTabJournal"
+		      layout_borders="Rect(-17,0,0,0)"
+		      hotkey      = "Toggle_SP_Journal"
+		      left_module  = "SPQuestJournal"
+		      right_module = "SPQuestView"
+		      />
+    </View>
+</View>

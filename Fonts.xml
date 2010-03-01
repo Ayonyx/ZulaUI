@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 61157 $ (must be within the first 200 characters of the file) -->
+<Fonts> 
+
+<!-- List of extra none standard fonts that need to be added as a font resource by the game. -->
+<FontMemResource name="Gui/Default/Fonts/hyborian.ttf" />
+<FontMemResource name="Gui/Customized/Fonts/Sony_Sketch_EF.ttf" />
+
+<!--
+'name' = User defined font name. Used in GUI files to define the font an object should use.
+'face' = Windows font name to use.
+'size' = Point size of font or 'Scaled' to specify a resolution dependent size with a base scale of 'x'.
+'weight' = Controls the weight of the font. Can be one of: 'Thin', 'ExtraLight', 'Light', 'Normal', 'Medium', 'SemiBold', 'Bold', 'ExtraBold', or 'Heavy'.
+(NB: While Windows claims to support all of the above weights, I have only ever seen a noticable difference between Normal and Bold.)
+'italic' = Specifies an italic typeface or not. Can be 'Yes', or 'No'.
+'antialias' = Specifies the level of antialiasing. Can be 'None', 'Medium', 'High', or 'Auto'.
+-->
+<Font name="NORMAL" face="Arial" size="12" weight="Normal" italic="No" antialias="Full"/>
+<Font name="NORMAL_ITALIC" face="Arial" size="12" weight="Normal" italic="Yes" antialias="Full"/>
+<Font name="NORMAL_BOLD" face="Arial" size="12" weight="Bold" italic="No" antialias="Full"/>
+<Font name="SMALL" face="Arial" size="11" weight="Normal" italic="No" antialias="Full"/>
+<Font name="LARGE" face="Arial" size="13" weight="Medium" italic="No" antialias="Full"/>
+<Font name="LARGE_BOLD" face="Arial" size="13" weight="Bold" italic="No" antialias="Full"/>
+<Font name="HUGE" face="Arial" size="14" weight="Medium" italic="No" antialias="Full"/>
+<Font name="CHAT" face="Arial" size="11" weight="Normal" italic="No" antialias="Full"/>
+
+<Font name="HYBORIANSMALL" face="hyborian2" size="14" weight="Medium" italic="No" antialias="Full"/>
+<Font name="HYBORIANLARGE" face="hyborian2" size="18" weight="Medium" italic="No" antialias="Full"/>
+
+<Font name="FLYING_NUMBERS" face="Sony Sketch EF" size="40" weight="Normal" italic="No" antialias="Full"/>
+<Font name="FLYING_NUMBERS_ITALICS" face="Sony Sketch EF" size="40" weight="Normal" italic="Yes" antialias="Full"/>
+<Font name="FLYING_NUMBERS_SHIELDED" face="Sony Sketch EF" size="44" weight="Normal" italic="No" antialias="Full"/>
+<Font name="FLYING_NUMBERS_SHIELDED_ITALICS" face="Sony Sketch EF" size="44" weight="Normal" italic="Yes" antialias="Full"/>
+
+<Font name="COMBAT_FEEDBACK" face="hyborian2" size="36" weight="Medium" italic="No" antialias="Full"/>
+<Font name="HEADLINE" face="hyborian2" size="20" weight="Medium" italic="No" antialias="Full"/>
+<Font name="LARGE_SC" face="Arial" size="14" weight="Normal" italic="No" antialias="None"/>
+
+<Font name="3D_TEXT" face="Arial" size="30" weight="Medium" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_BOLD" face="Arial" size="30" weight="Bold" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_SMALL" face="Arial" size="25" weight="Medium" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_ARIAL" face="Arial" size="30" weight="Medium" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_HYB" face="Arial" size="40" weight="Medium" italic="No" antialias="Full"/>
+
+<Font name="SCALED" face="Arial" size="Scaled(20)" weight="Medium" italic="No" antialias="Full"/>
+
+<!--
+Regional font declarations must follow the above list of defaults. Region codes are defined by ISO 639-1.
+The font names below must match the names above. Any fonts listed below will replace the attributes of
+the font above as long as a matching name is found. You cannot add additional fonts for a region.
+-->
+<Region code="ko">
+<Font name="NORMAL" face="Gulim" size="11" weight="Normal" italic="No" antialias="None"/>
+<Font name="NORMAL_ITALIC" face="Gulim" size="11" weight="Normal" italic="Yes" antialias="None"/>
+<Font name="NORMAL_BOLD" face="Gulim" size="11" weight="Bold" italic="No" antialias="None"/>
+<Font name="SMALL" face="Gulim" size="10" weight="Normal" italic="No" antialias="None"/>
+<Font name="LARGE" face="Gulim" size="14" weight="Medium" italic="No" antialias="Full"/>
+<Font name="LARGE_BOLD" face="Gulim" size="14" weight="Bold" italic="No" antialias="Full"/>
+<Font name="HUGE" face="Gulim" size="16" weight="Medium" italic="No" antialias="Full"/>
+<Font name="CHAT" face="Gulim" size="11" weight="Normal" italic="No" antialias="None"/>
+
+<Font name="HYBORIANSMALL" face="Gulim" size="14" weight="Medium" italic="No" antialias="Full"/>
+<Font name="HYBORIANLARGE" face="Gulim" size="18" weight="Medium" italic="No" antialias="Full"/>
+
+<Font name="FLYING_NUMBERS" face="Gulim" size="30" weight="Normal" italic="No" antialias="Full"/>
+<Font name="FLYING_NUMBERS_ITALICS" face="Gulim" size="30" weight="Normal" italic="Yes" antialias="Full"/>
+<Font name="FLYING_NUMBERS_SHIELDED" face="Gulim" size="34" weight="Normal" italic="No" antialias="Full"/>
+<Font name="FLYING_NUMBERS_SHIELDED_ITALICS" face="Gulim" size="34" weight="Normal" italic="Yes" antialias="Full"/>
+
+<Font name="COMBAT_FEEDBACK" face="Gulim" size="36" weight="Medium" italic="No" antialias="Full"/>
+<Font name="HEADLINE" face="Gulim" size="20" weight="Medium" italic="No" antialias="Full"/>
+<Font name="LARGE_SC" face="Gulim" size="14" weight="Normal" italic="No" antialias="None"/>
+
+<Font name="3D_TEXT" face="Gulim" size="30" weight="Medium" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_BOLD" face="Gulim" size="30" weight="Bold" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_SMALL" face="Gulim" size="25" weight="Medium" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_ARIAL" face="Gulim" size="30" weight="Medium" italic="No" antialias="Full"/>
+<Font name="3D_TEXT_HYB" face="Gulim" size="40" weight="Medium" italic="No" antialias="Full"/>
+
+<Font name="SCALED" face="Gulim" size="Scaled(20)" weight="Medium" italic="No" antialias="Full"/>
+</Region>
+
+</Fonts>

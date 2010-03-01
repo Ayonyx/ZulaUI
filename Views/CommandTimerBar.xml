@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View view_layout="stacked">
+	<ProgressBar name="TimerBar" layout_borders="Rect(0,0,0,0)"
+		     orientation="right"
+		     left_margin="1"
+		     bg_gfx="GUIComponents/bar/timerbar_smaller.tga"
+		     fg_gfx="../../Customized/gfx/BelaUI/GUIComponents/bar/timerbar_smaller_full.tga"/>
+  <TextView name="ActionName" value="Casting" max_size_limit="Point(164, COORD_MAX)" layout_borders="Rect(0,0,0,3)" feature_flags="TVF_ENABLE_ELLIPSIS"/>
+</View>

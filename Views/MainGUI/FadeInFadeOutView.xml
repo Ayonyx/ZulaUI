@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 67111 $ (must be within the first 200 characters of the file) -->
+<View view_layout     ="stacked"
+      layout_borders  = "Rect(0,0,0,0)"
+      max_size_extend = "Point(COORD_MAX,-1)"
+      shadow_offset   = "Point(2.0,2.0)">
+  <!--BorderView view_layout          = "horizontal"
+              layout_borders       = "Rect(0,0,0,0)"
+              layout_inner_borders = "Rect(20,2,20,8)"
+              max_size_extend      = "Point(COORD_MAX,-1)"
+              gfx_top              = "misc/fadeinout_top.tga"
+              gfx_background       = "misc/fadeinout_center.tga"
+              gfx_bottom           = "misc/fadeinout_bottom.tga"-->
+    <View view_layout="horizontal">
+    <!--View view_layout = "vertical" layout_borders = "Rect(0,4,15,2)">
+      <VLayoutSpacer/-->
+      <BitmapView name       = "BitmapViewLeft"
+                  layout_borders="Rect(0,0,15,2)"
+                  bitmap_gfx = "icons/crossed_swords.tga"
+      />
+      <!--VLayoutSpacer/>
+    </View-->
+    <TextView name           = "TextView"
+              font           = "HUGE"
+              layout_borders = "Rect(0,0,0,2)"
+              layout_weight  = "0"
+              default_color  = "white"
+              feature_flags  = "TVF_RENDER_SHADOW|TVF_RENDER_HALO|TVF_MULTILINE|TVF_WORD_WRAP"
+              pref_size_mode = "FLEXIBLE_WIDTH"
+    />
+    <!--View view_layout = "vertical" layout_borders = "Rect(15,4,0,2)">
+      <VLayoutSpacer/-->
+      <BitmapView name       = "BitmapViewRight" 
+                  layout_borders="Rect(13,0,0,2)"
+                  bitmap_gfx = "icons/crossed_swords.tga"
+      />
+      <!--VLayoutSpacer/>
+    </View-->
+    </View>
+  <!--/BorderView-->
+</View>

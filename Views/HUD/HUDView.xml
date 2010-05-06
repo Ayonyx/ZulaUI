@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<!-- $Change: 76562 $ (must be within the first 200 characters of the file) -->
+<!-- $Change: 81145 $ (must be within the first 200 characters of the file) -->
 <View name="HUDView" xmlns:template="template.dtd" view_layout="stacked" v_alignment="TOP">
     <!--BitmapView bitmap_gfx="bottombars/top_bar.tga"
 		max_size_extend="Point(COORD_MAX,-1)"
@@ -38,6 +38,7 @@
             <HLayoutSpacer/>            
             <View view_layout="vertical" h_alignment="RIGHT">                
                 <View view_layout="stacked" v_alignment="TOP" h_alignment="RIGHT">
+					<View name="RadarViewDock" view_layout="stacked" layout_borders="Rect(0,-40,0,0)" min_size_extend="Point(-1,30)" view_flags="WID_IGNORE_WHEN_HIDDEN" />
                 </View>
                 <View name="PvPMiniScoreDock" view_layout="stacked" layout_borders="Rect(0,0,0,0)"/>
                 <WindowDockView name="BugReportBtnDock" view_layout="stacked" layout_borders="Rect(0,0,0,0)"/>

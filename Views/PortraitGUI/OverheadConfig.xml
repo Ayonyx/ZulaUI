@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Change: 81145 $ (must be within the first 200 characters of the file) -->
+<Root color_self		    = "#6d6dff"
+      color_team		    = "#6da0ff"
+      color_raid		    = "#6da0ff"
+      color_guild	        = "#be00be"
+      color_friendly_player = "#6d6dff"
+      color_hostile_npc	        = "#B41D1D"
+      color_hostile_minion_npc  = "#B41D1D"
+      color_hostile_player      = "#B41D1D"
+      color_hostile_low_lvl_player = "gray"
+      color_friendly_npc  = "#5b933d"
+      color_low_lvl_npc	  = "#8A8A89"
+      color_lockedout 	  = "gray"
+      color_game_master   = "#FF8000"
+
+      top_text_font       = "3D_TEXT"
+      bottom_text_font    = "3D_TEXT_SMALL"
+      
+      min_text_scale      = "3.0"
+      max_text_scale      = "3.0"
+      text_scale_factor   = "1"
+      min_bar_scale      = "1.7"
+      max_bar_scale      = "4.0"
+      bar_scale_factor    = "0.13"
+      
+      bar_bg_fx = "PortraitGUI/bottombars/overhead_new_bg.tga"
+      bar_fg_fx = "PortraitGUI/bottombars/overhead_new_full.tga"
+      
+      text_y_offset = "5"
+      bar_y_offset  = "1.3"
+>
+</Root>

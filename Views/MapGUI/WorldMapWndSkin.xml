@@ -1,0 +1,108 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- $Change: 81145 $ (must be within the first 200 characters of the file) -->
+<View   view_layout="stacked" name="NormalWindowRoot" view_flags="WID_HANDLE_MOUSE"
+	h_alignment="LEFT"
+	v_alignment="TOP"
+	resize_tl   = "Point(15,15)"
+	resize_tr   = "Point(36,15)"
+	resize_bl   = "Point(15,15)"
+	resize_br   = "Point(36,15)"
+	
+	resize_edge_borders = "Rect(60,10,10,10)"
+	resize_edges       = "Rect(15,5,36,15)"
+	dragbar_height     = "38"
+	minimum_border_size = "Point(199,199)"
+
+	show_sound = "sfx/gui/gui_window_popup.wav"
+	hide_sound = "sfx/gui/gui_window_close.wav"
+>
+    <Button name="ToggleRegionMapButton" layout_borders="Rect(0,20,0,0)"
+	    gfxid_raised="WorldMap/worldmap_switch.tga"
+	    gfxid_pressed="WorldMap/worldmap_switch.tga"
+	    gfxid_highlight="WorldMap/worldmap_switch_hover.tga"/>
+    <View view_layout="stacked"
+	  layout_borders="Rect(40,0,0,0)"
+	  min_size_limit="Point(-1,-1)"
+	  max_size_extend="Point(COORD_MAX,COORD_MAX)"
+	  h_alignment="STRETCH"
+	  v_alignment="STRETCH"
+	  >
+	<ViewSelector name="WndViewSelector" layout_borders ="Rect(48,60,49,67)" min_size_extend="Point(299,299)" max_size_limit="Point(799,799)"/>
+	<BorderView
+	    _h_alignment="LEFT"
+	    _v_alignment="TOP"
+	    view_layout="stacked"
+	    view_flags            = "BVF_TILE_ALL_BORDERS|BVF_TILE_BACKGROUND"
+	    
+	    __bg_bitmap_borders    = "Rect(7,37,7,14)"
+	    gfx_tl         = "WorldMap/regionmap_border_topleft.tga"
+	    gfx_tr         = "WorldMap/regionmap_border_topright.tga"
+	    gfx_bl         = "WorldMap/regionmap_border_bottomleft.tga"
+	    gfx_br         = "WorldMap/regionmap_border_bottomright.tga"
+	    gfx_left       = "WorldMap/regionmap_border_left.tga"
+	    gfx_top        = "WorldMap/regionmap_border_top.tga"
+	    gfx_right      = "WorldMap/regionmap_border_right.tga"
+	    gfx_bottom     = "WorldMap/regionmap_border_bottom.tga"
+	    gfx_background = ""
+	    >
+	    <View view_layout="stacked" max_size_extend="Point(COORD_MAX,COORD_MAX)">
+		<BitmapView bitmap_gfx="WorldMap/regionmap_border_fade_topleft.tga"     h_local_alignment="LEFT"  v_local_alignment="TOP"/>
+		<BitmapView bitmap_gfx="WorldMap/regionmap_border_fade_topright.tga"    h_local_alignment="RIGHT" v_local_alignment="TOP"/>
+		<BitmapView bitmap_gfx="WorldMap/regionmap_border_fade_bottomleft.tga"  h_local_alignment="LEFT"  v_local_alignment="BOTTOM"/>
+		<BitmapView bitmap_gfx="WorldMap/regionmap_border_fade_bottomright.tga" h_local_alignment="RIGHT" v_local_alignment="BOTTOM"/>
+	    </View>
+	    <View view_layout="vertical">
+		<View view_layout="horizontal">
+		    <View view_layout="stacked" >
+			<TextView name="WndTitleView"
+				  layout_borders="Rect( 40, 0, 0, 0 )"
+				  font="HYBORIANLARGE"
+				  default_color="#5e4326"
+				  min_size="Point(0,0)"
+				  />
+			<BitmapView bitmap_gfx="WorldMap/regionmap_fadedtext_overlay.tga"
+				    view_flags="BMF_TILE_HORIZONTALLY"
+				    min_size_limit="Point(-1,COORD_MAX)"
+				    max_size_extend="Point(COORD_MAX,-1)"
+				    />
+		    </View>
+		    <HLayoutSpacer layout_weight="0" />
+		    
+		    <Button name="WndCloseButton" layout_borders="Rect(0,0,21,0)"
+			    max_zoom="1"
+			    gfxid_raised="GUIcomponents/closebuttons/close_black.tga"
+			    gfxid_pressed="GUIcomponents/closebuttons/close_black_pressed.tga"
+			    gfxid_highlight="GUIcomponents/closebuttons/close_black_hover.tga"/>
+		</View>
+		
+		<VLayoutSpacer/>
+		
+		<View view_layout="horizontal" layout_borders="Rect(50,0,50,34)" min_size_limit="Point(-1,COORD_MAX)" max_size_extend="Point(COORD_MAX,-1)">
+		    <TextView name="CoordinatesView" view_flags="WID_IGNORE_WHEN_HIDDEN" layout_borders="Rect(0,0,10,0)" default_color="black"/>
+		    <HLayoutSpacer layout_weight="0"/>
+		    <TextView name="CurrentQuestNameView" min_size_limit="Point(-1,COORD_MAX)" default_color="black"/>
+		</View>
+	    </View>
+	</BorderView>
+	<View view_layout="stacked"
+	      h_alignment="RIGHT"
+	      v_alignment="BOTTOM"
+	      layout_inner_borders="Rect(0,0,60,84)"
+	      max_size_extend="Point(COORD_MAX,COORD_MAX)">
+	    <BitmapView view_layout="vertical" layout_inner_borders="Rect(0,0,0,4)" bitmap_gfx="WorldMap/regionmap_zoombox.tga">
+		<VLayoutSpacer/>
+		<Button name="ZoomInButton"
+			layout_borders="Rect(0,0,0,5)"
+			gfxid_raised="WorldMap/regionmap_zoomin.tga"
+			gfxid_pressed="WorldMap/regionmap_zoomin.tga"
+			gfxid_highlight="WorldMap/regionmap_zoomin_hover.tga"/>
+		<Button name="ZoomOutButton"
+			gfxid_raised="WorldMap/regionmap_zoomout.tga"
+			gfxid_pressed="WorldMap/regionmap_zoomout.tga"
+			gfxid_highlight="WorldMap/regionmap_zoomout_hover.tga"/>
+	    </BitmapView>
+	</View>
+    </View>
+</View>
+
+

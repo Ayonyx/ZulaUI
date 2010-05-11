@@ -68,7 +68,7 @@
 				<ShortcutView name="BelaUI1stExtAddBar1" layout_borders="Rect(0,0,0,4)" first_slot="20000" slot_count="6" hotkeyrange_start="Shortcutbar_Extra1_1" hotkeyrange_length="6"/>
 				<PerkView name="PerkBar1" layout_borders="Rect(0,0,0,4)"  first_slot="13000" slot_count="6"/>
 			</ViewSelector>
-			<ShortcutView name="BelaUI1stExtAddBar1" layout_borders="Rect(253,0,0,4)" first_slot="20006" slot_count="2" hotkeyrange_start="Shortcutbar_Extra1_7" hotkeyrange_length="2"/>
+			<ShortcutView name="BelaUI1stExtAddBar1" layout_borders="Rect(252,0,0,4)" first_slot="20006" slot_count="2" hotkeyrange_start="Shortcutbar_Extra1_7" hotkeyrange_length="2"/>
 		  </View>
           <BitmapView view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,-11)" bitmap_gfx="bottombars/bottombar_b_outside_simple.tga"/>
         </View>

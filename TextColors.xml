@@ -24,7 +24,7 @@
 
     <HTMLColor name="active"        color="0xFE5604" />
     <HTMLColor name="actv_disabled" color="0xA57B4A" />
-    <HTMLColor name="standard"      color="0xFFFFFF" />
+    <HTMLColor name="standard"      color="0x8A8A89" />
     <HTMLColor name="std_disabled"  color="0x585858" />
     <HTMLColor name="negative"      color="0xB41D1D" />
     <HTMLColor name="positive"      color="0x5B933D" />
@@ -94,8 +94,8 @@
     <HTMLColor name="ctch_gm_name"          color="0xe38f35" />
     <HTMLColor name="ctch_gm_text"          color="0xe38f35" />
     
-    <HTMLColor name="ctch_misc_name"        color="standard" />
-    <HTMLColor name="ctch_misc_text"        color="standard" />
+    <HTMLColor name="ctch_misc_name"        color="0xFFFFFF" />
+    <HTMLColor name="ctch_misc_text"        color="0xFFFFFF" />
     
     <HTMLColor name="ctch_newbie_name"      color="standard" />
     <HTMLColor name="ctch_newbie_text"      color="standard" />

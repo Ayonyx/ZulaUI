@@ -13,30 +13,31 @@
 -->
 
 <View xmlns:template="template.dtd" xmlns:nocreate="nocreate.dtd" view_layout="horizontal" v_alignment="BOTTOM" _view_flags="WID_HANDLE_MOUSE">
-  <template:ShortcutView layout_borders="Rect(0,0,0,0)" out_of_range_bitmap="icons/outofrange_icon.tga" icon_spacing="2" slot_template="SlotTemplate">
-    <template:ItemSlotView template:name="SlotTemplate" layout_borders="Rect(2,0,2,0)" slot_size="Point(37,37)" icon_borders="Point(0,0)" max_zoom="1.0" gfx_background=""/>
-  </template:ShortcutView>
-
+	<template:ShortcutView layout_borders="Rect(0,0,0,0)" out_of_range_bitmap="icons/outofrange_icon.tga" icon_spacing="2" slot_template="SlotTemplate">
+		<template:ItemSlotView template:name="SlotTemplate" layout_borders="Rect(2,0,2,0)" slot_size="Point(37,37)" icon_borders="Point(0,0)" max_zoom="1.0" gfx_background=""/>
+	</template:ShortcutView>
+	<template:PerkView  icon_spacing = "2" slot_template="PerkTemplate">
+		<template:ItemSlotView template:name="PerkTemplate" layout_borders="Rect(2,0,2,0)" slot_size    = "Point(37,37)" icon_borders = "Point(0,0)" max_zoom="1.0" gfx_background=""/>
+	</template:PerkView>
+	
 <!-- left block -->
-  <View view_layout="vertical">
-<!-- left portrait -->
-    <View name="LPortraitParentView" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,42,0)">
-	  	  <!-- LAG METER -->
-	<!-- LAG METER END -->
-	<HLayoutSpacer/>
-      <View view_layout="stacked" layout_borders="Rect(0,0,-29,13)">
-        <SoulFragmentBar />
-        <PetCommandBar />
-      </View>
+	<View view_layout="vertical">
+		<!-- left portrait -->
+		<View name="LPortraitParentView" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,42,0)">
+		<HLayoutSpacer/>
+		<View view_layout="stacked" layout_borders="Rect(0,0,-29,13)">
+			<SoulFragmentBar />
+			<PetCommandBar />
+		</View>
       <View name="LPortraitViewDock" view_layout="stacked" h_alignment="RIGHT" _min_size_limit="Point(-1,COORD_MAX)" _max_size_extend="Point(COORD_MAX,-1)" layout_borders="Rect(0,0,0,0)"/>
-    </View>
+	</View>
 <!-- /left portrait -->
     <View view_layout="vertical" h_alignment="LEFT" v_alignment="BOTTOM" layout_borders="Rect(20,-21,0,0)">
 <!-- left top bar -->
       <View view_layout="stacked" h_alignment="LEFT" v_alignment="BOTTOM">
         <View view_layout="horizontal">
-          <BitmapView view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,-11)" bitmap_gfx="bottombars/bottombar_a_outside_simple.tga"/>
-          <View view_layout="stacked" h_alignment="LEFT" v_alignment="BOTTOM">
+		  <BitmapView view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,-11)" bitmap_gfx="bottombars/bottombar_a_outside_simple.tga"/>
+		  <View view_layout="stacked" h_alignment="LEFT" v_alignment="BOTTOM">
             <View view_layout="horizontal">
               <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
                 <ShortcutView layout_borders="Rect(42,43,0,13)"/>
@@ -62,24 +63,13 @@
               <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
                 <ShortcutView layout_borders="Rect(42,43,0,13)"/>
               </BitmapView>
-              <!--<BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>-->
             </View>
-            <ShortcutView name="BelaUI1stExtAddBar1" layout_borders="Rect(0,0,0,4)" first_slot="20000" slot_count="8" hotkeyrange_start="Shortcutbar_Extra1_1" hotkeyrange_length="8"/>
-          </View>
+			<ViewSelector name="ViewSelector">
+				<ShortcutView name="BelaUI1stExtAddBar1" layout_borders="Rect(0,0,0,4)" first_slot="20000" slot_count="6" hotkeyrange_start="Shortcutbar_Extra1_1" hotkeyrange_length="6"/>
+				<PerkView name="PerkBar1" layout_borders="Rect(0,0,0,4)"  first_slot="13000" slot_count="6"/>
+			</ViewSelector>
+			<ShortcutView name="BelaUI1stExtAddBar1" layout_borders="Rect(253,0,0,4)" first_slot="20006" slot_count="2" hotkeyrange_start="Shortcutbar_Extra1_6" hotkeyrange_length="2"/>
+		  </View>
           <BitmapView view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,-11)" bitmap_gfx="bottombars/bottombar_b_outside_simple.tga"/>
         </View>
       </View>
@@ -116,21 +106,6 @@
               <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
                 <ShortcutView layout_borders="Rect(42,43,0,13)"/>
               </BitmapView>
-              <!--<BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>-->
             </View>
             <ShortcutView name="BelaUILeftActionBar" layout_borders="Rect(0,0,0,7)" first_slot="10000" slot_count="1" hotkeyrange_start="Shortcutbar_Left_1" hotkeyrange_length="1"/>
           </View>
@@ -206,21 +181,6 @@
               <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
                 <ShortcutView layout_borders="Rect(42,43,0,13)"/>
               </BitmapView>
-              <!--<BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,0,0,0)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>-->
             </View>
             <ShortcutView name="BelaUI2ndExtAddBar1" layout_borders="Rect(0,0,0,4)" first_slot="20100" slot_count="1" hotkeyrange_start="Shortcutbar_Extra2_1" hotkeyrange_length="1"/>
           </View>
@@ -258,21 +218,6 @@
               <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
                 <ShortcutView layout_borders="Rect(42,43,0,13)"/>
               </BitmapView>
-              <!--<BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>
-              <BitmapView view_flags="BMF_IGNORE_BITMAP_WIDTH | BMF_IGNORE_BITMAP_HEIGHT" view_layout="horizontal" v_alignment="BOTTOM" layout_borders="Rect(0,-12,0,2)" bitmap_gfx="bottombars/bottombar_a_lastslot.tga">
-                <ShortcutView layout_borders="Rect(42,43,0,13)"/>
-              </BitmapView>-->
             </View>
             <ShortcutView name="BelaUI2ndExtAddBar2" layout_borders="Rect(0,0,0,7)" first_slot="20106" slot_count="8" hotkeyrange_start="Shortcutbar_Extra2_7" hotkeyrange_length="8"/>
           </View>
